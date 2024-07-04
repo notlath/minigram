@@ -1,23 +1,30 @@
 <!doctype html>
 <html>
 <head>
-    <title>MY PERSONAL INSTAGRAM</title>
+    <title>MINI INSTAGRAM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+    <script>
+        let timestamps = document.querySelectorAll('.timestamp'); // Use a class to identify all timestamps
+        timestamps.forEach(function(timestamp) {
+            let localTime = moment.utc(timestamp.innerHTML).tz('Asia/Manila').fromNow();
+            timestamp.innerHTML = localTime;
+        });
+    </script>
 </head>
 <?php
 session_start();
 if(isset($_SESSION['userid']))
 {
-    //echo "<script> alert('USER ALREADY LOGGED IN'); </script> ";
     header('Location: dashboard/index.php');
 }
 ?>
 <body>
-<center><img src="logo.png" width="10%"/>
+<center><img src="logo.jpg" width="10%"/>
     <form name="login_form" method="post" action="authenticate.php">
         <div class="table-responsive" style="width: 60%">
             <table class="table table-striped">

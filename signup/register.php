@@ -4,8 +4,6 @@ include '../connect.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-// TODO ADVANCED:
-// Secure password by storing MD5/SHA-512 hash in DB.
 
 $sql_users = "INSERT INTO `users` (`userid`, `name`, `email`, `password`) VALUES (NULL, '".$name."', '".$email."', '".$password."');";
 $res_users = mysqli_query($connect, $sql_users);

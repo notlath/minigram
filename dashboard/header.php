@@ -11,9 +11,6 @@
 <?php
 include '../connect.php';
 session_start();
-// TODO:
-// Even if the user is not logged in, this page gets rendered with unhandled error.
-// Show error message and redirect the user to Login Page
 if(!$_SESSION['name']){
     echo "<script type='text/javascript'> alert('Please login first') </script>";
     header('Location: ../index.php');

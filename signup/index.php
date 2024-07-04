@@ -16,24 +16,19 @@
             <tr>
                 <td>NAME: </td>
                 <td><input type="text" name="name" maxlength="50" required/></td>
-                <!-- Set minimum size of this field to 3-->
             </tr>
 
             <tr>
                 <td>EMAIL: </td>
                 <td> 
                 <input type="email" name="email" required />
-                <!-- Set minimum size of this field to 3 and maximum to 50. Should check to accept only string-->
                 </td>
             </tr>
 
             <tr>
                 <td>PASSWORD: </td>
                 <td><input type="password" name="password" maxlength="50" required/> </td>
-                <!-- Set minimum size of this field to 3-->
             </tr>
-
-            <!-- Create another field for confirm password -->
 
             <tr>
                 <td colspan="2"><center><input type="submit" name="submit_register"/> </center></td>
@@ -49,10 +44,6 @@
 </body>
 
 <script>
-// TODO:
-// Validate other fields like email and password.
-// Password must contain UpperCase & LowerCase alphabets, Numeral and Special Character.
-// Validate password and confirm password match
 function validateForm() {
     var name = document.forms["registration_form"]["name"].value;
     name = name.trim();

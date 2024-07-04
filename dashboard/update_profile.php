@@ -1,8 +1,5 @@
 <?php
 include '../connect.php';
-// TODO:
-// Perform form validation like that of signup.
-// Can we remove redundancy from here as well?
 ?>
 <?php   
 	include('header.php'); 
@@ -25,8 +22,6 @@ include '../connect.php';
 		echo '</td>';
 		echo '</tr>';
 		
-		// TODO
-		// Make the email field non-editable. This will act as anchor while updating the records.
 		echo '<tr>';
 		echo '<td><b><center>';
 		echo 'Email id : ';

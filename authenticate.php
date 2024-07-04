@@ -1,15 +1,9 @@
 <?php
 include 'connect.php';
 
-// TODO:
-// Use HTML & CSS to beautify this page.
-// If a user directly visits this page, he should see an error message and be redirected to Login page
-
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// TODO ADVANCED:
-// Secure password by storing MD5/SHA-512 hash in DB.
 $sql_users = "SELECT * FROM `users` WHERE `email`='".$email."' AND `password`='".$password."'";
 
 $res_users = mysqli_query($connect, $sql_users);
